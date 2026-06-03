@@ -4,8 +4,8 @@ from utils.config_reader import get_data, get_config
 def test_take_token(api_context):
     # Get token
     config = get_config("dev")
-    create_body = get_data("booking_data")["create_booking_payload"]
-    update_body = get_data("booking_data")["update_booking_payload"]
+    create_body = get_data("booking_data")["create_booking_payload_batch_2"]
+    update_body = get_data("booking_data")["update_booking_payload_batch_2"]
     take_token_response = api_context.post(
         "/auth",
         data = config["credentials"]

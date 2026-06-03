@@ -27,6 +27,6 @@ def booking_id(api_context):
     data = get_data("booking_data")
     response = api_context.post(
         "/booking",
-        data= data["create_booking_payload"]
+        data= data["create_booking_payload_batch_2"]
     )
     return response.json()["bookingid"]

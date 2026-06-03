@@ -2,7 +2,7 @@ from api.booking_api import BookingAPI
 from utils.config_reader import get_data
 
 def test_update_booking(api_context, booking_id, get_token):
-    body_data = get_data("booking_data")["update_booking_payload"]
+    body_data = get_data("booking_data")["update_booking_payload_batch_2"]
     booking_api = BookingAPI(api_context)
     response = booking_api.update_booking(booking_id, body_data, get_token)
     assert response.status == 200

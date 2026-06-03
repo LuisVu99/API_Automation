@@ -1,31 +1,90 @@
 {
-    "create_booking_payload" : {
-        "firstname":"linh",
-        "lastname":"Le",
-        "totalprice":2000,
-        "depositpaid": true,
-        "bookingdates":{
-            "checkin":"2025-05-12",
-            "checkout":"2025-06-14"
+    "create_booking_payload" : [
+        {
+            "firstname":"linh",
+            "lastname":"Le",
+            "totalprice":2000,
+            "depositpaid": true,
+            "bookingdates":{
+                "checkin":"2025-05-12",
+                "checkout":"2025-06-14"
+            },
+            "additionalneeds":"Breakfast"
         },
-        "additionalneeds":"Breakfast"
-    },
+        {
+            "firstname":"Luis",
+            "lastname":"Vu",
+            "totalprice":1500,
+            "depositpaid": true,
+            "bookingdates":{
+                "checkin":"2025-06-01",
+                "checkout":"2025-07-01"
+            },
+            "additionalneeds":"Lunch"
+        },
+        {
+            "firstname":"Lona",
+            "lastname":"Vo",
+            "totalprice":999,
+            "depositpaid": false,
+            "bookingdates":{
+                "checkin":"2025-06-01",
+                "checkout":"2025-07-01"
+            },
+            "additionalneeds":"Lunch"
+        }
+    ],
 
-    "update_booking_payload" : {
-        "firstname":"Luis",
-        "lastname":"Vu",
-        "totalprice":1000,
-        "depositpaid": false,
-        "bookingdates":{
-            "checkin":"2025-05-12",
-            "checkout":"2025-06-14"
+    "update_booking_payload" : [
+        {
+            "firstname":"Luis",
+            "lastname":"Vu",
+            "totalprice":1000,
+            "depositpaid": false,
+            "bookingdates":{
+                "checkin":"2025-05-12",
+                "checkout":"2025-06-14"
+            },
+            "additionalneeds":"Breakfast"
         },
-        "additionalneeds":"Breakfast"
-    },
+        {
+            "firstname":"Luis1",
+            "lastname":"Vu",
+            "totalprice":1000,
+            "depositpaid": false,
+            "bookingdates":{
+                "checkin":"2025-05-12",
+                "checkout":"2025-06-14"
+            },
+            "additionalneeds":"Breakfast"
+        }
+    ],
 
     "update_partially_booking_payload" : {
         "firstname":"Lona",
         "lastname":"Vo"
+    },
+    "create_booking_payload_batch_2" :{
+            "firstname":"Mia",
+            "lastname":"Nguyen",
+            "totalprice":1000,
+            "depositpaid": false,
+            "bookingdates":{
+                "checkin":"2025-05-12",
+                "checkout":"2025-06-14"
+            },
+            "additionalneeds":"Breakfast"
+    },
+    "update_booking_payload_batch_2" : {
+            "firstname":"Sandy",
+            "lastname":"Duong",
+            "totalprice":1000,
+            "depositpaid": false,
+            "bookingdates":{
+                "checkin":"2025-05-12",
+                "checkout":"2025-06-14"
+            },
+            "additionalneeds":"Breakfast"
     }
 }
 
