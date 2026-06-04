@@ -16,19 +16,18 @@ def test_update_booking(api_context, booking_id, get_token):
 
     price = body["totalprice"]
     assert price > 0
-    assert price == body_data["totalprice"], f"expected {body["totalprice"]}, but got {price}"
+    assert price == body_data["totalprice"]
     
     deposit_paid = body["depositpaid"]
-    assert deposit_paid == body_data["depositpaid"], f"expected depositpaid as {body["depositpaid"]}, but got {deposit_paid}"
+    assert deposit_paid == body_data["depositpaid"]
 
     check_in = body["bookingdates"]["checkin"]
-    assert check_in == body_data["bookingdates"]["checkin"], f"Expected '{body_data["bookingdates"]["checkin"]}', but got '{check_in}'"
+    assert check_in == body_data["bookingdates"]["checkin"]
 
     check_out = body["bookingdates"]["checkout"]
-    assert check_out == body_data["bookingdates"]["checkout"], f"Expected '{body_data["bookingdates"]["checkout"]}', but got '{check_out}'"
+    assert check_out == body_data["bookingdates"]["checkout"]
     
     meal = body["additionalneeds"]
-    assert meal == body_data["additionalneeds"], f"Expected '{body_data["additionalneeds"]}', but got '{meal}'"
-
+    assert meal == body_data["additionalneeds"]
 
 

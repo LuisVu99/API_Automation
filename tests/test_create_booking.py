@@ -15,26 +15,26 @@ def test_create_booking(api_context, payload):
     print(body)
 
     first_name = body["booking"]["firstname"]
-    assert first_name == payload["firstname"], f"expected {first_name}, but got {payloads["firstname"]}"
+    assert first_name == payload["firstname"], f"expected {first_name}, but got {payloads['firstname']}"
 
     last_name = body["booking"]["lastname"]
     assert last_name == payload["lastname"]
 
     price = body["booking"]["totalprice"]
     assert price > 0
-    assert price == payload["totalprice"], f"expected {body["totalprice"]}, but got {price}"
+    assert price == payload["totalprice"], f"expected {price}, but got {payload['totalprice']}"
     
     deposit_paid = body["booking"]["depositpaid"]
-    assert deposit_paid == payload["depositpaid"], f"expected depositpaid as {body["depositpaid"]}, but got {deposit_paid}"
+    assert deposit_paid == payload["depositpaid"], f"expected depositpaid as {body['depositpaid']}, but got {deposit_paid}"
 
     check_in = body["booking"]["bookingdates"]["checkin"]
-    assert check_in == payload["bookingdates"]["checkin"], f"Expected '{payload["bookingdates"]["checkin"]}', but got '{check_in}'"
+    assert check_in == payload["bookingdates"]["checkin"], f"Expected '{payload['bookingdates']['checkin']}', but got '{check_in}'"
 
     check_out = body["booking"]["bookingdates"]["checkout"]
-    assert check_out == payload["bookingdates"]["checkout"], f"Expected '{payload["bookingdates"]["checkout"]}', but got '{check_out}'"
+    assert check_out == payload["bookingdates"]["checkout"], f"Expected '{payload['bookingdates']['checkout']}', but got '{check_out}'"
     
     meal = body["booking"]["additionalneeds"]
-    assert meal == payload["additionalneeds"], f"Expected '{payload["additionalneeds"]}', but got '{meal}'"
+    assert meal == payload["additionalneeds"], f"Expected '{payload['additionalneeds']}', but got '{meal}'"
 
 
 
