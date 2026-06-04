@@ -6,7 +6,7 @@ def get_token(api_context):
             "password" : "password123"
         }
     )
-    assert response.status == 200, f"Expected 2000, but got {response.status}"
+    assert response.status == 200, f"Expected 200, but got {response.status}"
     print(response.status)
     return response.json()["token"]
     
