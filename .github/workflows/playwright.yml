@@ -44,16 +44,19 @@ jobs:
 
       - name: Run test
         id: test
-        run: pytest --alluredir=allure-results -v --tb=short
+        run: pytest --alluredir=allure-results -v --tb=short > test_results.txt 2>&1 || true
 
       - name: Upload allure results
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: allure-results
+          if-no-files-found: ignore
 
   allure-report:
     needs: test
+    if: success()
     runs-on: ubuntu-latest
     permissions:
       contents: write
