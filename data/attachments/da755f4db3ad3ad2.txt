@@ -1,0 +1,2 @@
+✓ Booking created with ID: 874
+{'bookingid': 874, 'booking': {'firstname': 'Luis', 'lastname': 'Vu', 'totalprice': 1500, 'depositpaid': True, 'bookingdates': {'checkin': '2025-06-01', 'checkout': '2025-07-01'}, 'additionalneeds': 'Lunch'}}

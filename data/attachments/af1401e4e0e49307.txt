@@ -1,0 +1,2 @@
+✓ Booking created with ID: 877
+{'bookingid': 877, 'booking': {'firstname': 'Lona', 'lastname': 'Vo', 'totalprice': 999, 'depositpaid': False, 'bookingdates': {'checkin': '2025-06-01', 'checkout': '2025-07-01'}, 'additionalneeds': 'Lunch'}}
