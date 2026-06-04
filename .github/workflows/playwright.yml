@@ -44,7 +44,17 @@ jobs:
 
       - name: Run test
         id: test
-        run: pytest --alluredir=allure-results -v --tb=short > test_results.txt 2>&1 || true
+        run: pytest --alluredir=allure-results -v --tb=short | tee test_results.txt
+        continue-on-error: true
+
+      - name: Debug allure results
+        if: always()
+        run: |
+          echo "===== ALLURE FILES ====="
+          find allure-results -type f || true
+
+          echo "===== TEST RESULTS ====="
+          cat test_results.txt || true
         
       - name: Create allure-results if not exists
         run: mkdir -p allure-results
