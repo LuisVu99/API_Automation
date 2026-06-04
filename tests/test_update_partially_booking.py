@@ -13,5 +13,5 @@ def test_update_partially_booking(api_context, booking_id, get_token):
     body = response.json()
     first_name = body["firstname"]
     last_name = body["lastname"]
-    assert first_name == body_data["firstname"], f"Expected '{body_data["firstname"]}', but got '{first_name}'" 
-    assert last_name == body_data["lastname"], f"Expected '{body_data["lastname"]}', but got '{last_name}'" 
+    assert first_name == body_data["firstname"] 
+    assert last_name == body_data["lastname"]
