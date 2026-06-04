@@ -37,20 +37,17 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: pip-${{ hashFiles('Booking/requirements.txt') }}
+          key: pip-${{ hashFiles('requirements.txt') }}
 
       - name: Install dependencies
-        working-directory: Booking
         run: pip install -r requirements.txt
 
       - name: Run test
-        working-directory: Booking
         id: test
         run: pytest --alluredir=allure-results -v --tb=short > test_results.txt 2>&1 || true
 
       - name: Notify Slack
         if: always()
-        working-directory: Booking
         run: |
           STATUS=${{ job.status }}
           BRANCH=${{ github.ref_name }}
@@ -144,7 +141,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
-          path: Booking/allure-results
+          path: allure-results
 
   allure-report:
     needs: test
